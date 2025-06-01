@@ -13,7 +13,7 @@ def text_to_speech_with_gtts(text, output_file):
     
     try:
         if platform.system() == "Windows":
-            subprocess.run(["powershell", '-c',f'(New-object Media.Soundplayer "{output_filepath}").PlaySync();'])
+            subprocess.run(["powershell", '-c',f'(New-object Media.Soundplayer "{output_file}").PlaySync();'])
         elif platform.system() == "Darwin":  # macOS
             subprocess.run(["afplay", output_file])
         else:  # Linux and other systems
@@ -21,9 +21,6 @@ def text_to_speech_with_gtts(text, output_file):
     except Exception as e:
         print(f"Error opening audio file: {e}")
 
-input_text = "Hello, this is a test of the text-to-speech conversion ,autoplay enabled"
-output_filepath = "output.mp3"
-text_to_speech_with_gtts(input_text, output_filepath)
 
 # import elevenlabs
 # from elevenlabs.client import ElevenLabs

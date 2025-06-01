@@ -36,18 +36,20 @@ GROQ_API_KEY=os.getenv("GROQ_API_KEY")
 if not GROQ_API_KEY:
     raise ValueError("GROQ_API_KEY environment variable is not set.")
 
-client = Groq(api_key=GROQ_API_KEY)
 stt_model="whisper-large-v3-turbo"
+def transcribe_audio_with_groq(audio_file_path,stt_model,GROQ_API_KEY):
+    client = Groq(api_key=GROQ_API_KEY)
+    stt_model = stt_model
 
-audio_file=open(audio_file_path, "rb")
+    audio_file=open(audio_file_path, "rb")
 
-transcription = client.audio.transcriptions.create(
-    file=audio_file,
-    model=stt_model,
-    language="en",
-    response_format="text"
-)
+    transcription = client.audio.transcriptions.create(
+        file=audio_file,
+        model=stt_model,
+        language="en",
+        response_format="text"
+    )
 
 
-print(transcription)
+    return(transcription)
 
