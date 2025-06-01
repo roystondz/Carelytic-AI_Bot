@@ -24,9 +24,6 @@ def record_audio_simple(file_path,timeout=20,phrase_time_limit=None):
         logging.error(f"An error occurred: {e}")
         return None
 
-audio_file_path = "patient_voice.mp3"
-record_audio_simple(file_path=audio_file_path)
-
 ###
 import os
 from dotenv import load_dotenv
