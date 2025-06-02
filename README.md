@@ -12,7 +12,7 @@
 
 ## 📸 Demo
 
-![Carelytic Demo](Carelytic-AI_Bot/sample_output.png) <!-- Replace with actual media or image path -->
+![Carelytic Demo](sample_ouput.png) <!-- Replace with actual media or image path -->
 
 ## 🏗️ Tech Stack
 
