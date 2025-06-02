@@ -31,6 +31,13 @@ git clone https://github.com/yourusername/carelytic.git
 cd carelytic
 ```
 
+## Activate virtual environment
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+### 2. Install Requirements
 ```bash
 pip install -r requirements.txt
 ```
@@ -41,7 +48,7 @@ pip install -r requirements.txt
 GROQ_API_KEY=your_groq_api_key
 ELEVENLABS_API_KEY=your_elevenlabs_api_key (Eleven Labs is commented  !! if required uncomment it)
 ```
-
+### 4. Run the app
 ```bash
 python gradio_app.py
 ```
