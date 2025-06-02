@@ -34,13 +34,14 @@ def process(audio_file, image_file):
 iface = gr.Interface(
     fn=process,
     inputs=[
-        gr.Audio(sources=['microphone'],type="filepath", ),
+        gr.Audio(sources=['microphone'],type="filepath", label="Record Audio", 
+                ),
         gr.Image(type="filepath", label="Upload Image"),
     ],
     outputs=[
         gr.Textbox(label="Transcription"),
         gr.Textbox(label="Analysis Result"),
-        gr.Audio(label="Doctor's Response", autoplay=True),
+        gr.Audio(label="Doctor's Response", autoplay=True,),
     ],
     title="Voice of the Doctor - Carelytic",
     
